@@ -36,7 +36,7 @@
 
 .advice__container {
     position: relative;
-    max-width: 24rem;
+    width: 24rem;
     padding: 1.5rem 30px 1.5rem 30px;
     display: flex;
     align-items: center;
@@ -90,8 +90,9 @@
     100% { transform: rotate(360deg); }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 578px) {
     .advice__container {
+        width: 80%;
         margin: 0px 20px;
     }
 }
