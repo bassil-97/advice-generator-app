@@ -1,38 +1,97 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.loader {
+    margin: 0 auto;
+    margin-top: 20px;
+    border: 6px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 6px solid hsl(150, 100%, 66%);
+    width: 50px;
+    height: 50px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+}
+
+.divider {
+    width: 100%;
+    height: 20px;
+    margin: 30px 0px;
+    background: url('./images/pattern-divider-desktop.svg') no-repeat;
+    background-size: 100% auto;
+}
+
 .App {
-  text-align: center;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #202632;
+    font-family: 'Manrope', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.advice__container {
+    position: relative;
+    width: 24rem;
+    padding: 1.5rem 30px 1.5rem 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 6px;
+    background-color: #313A49;
+    text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.advice_body > small {
+    text-transform: uppercase;
+    color: hsl(150, 100%, 66%);
+    letter-spacing: 2px;
+    font-size: .6em;
+    font-weight: bold;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.advice_body > h4 {
+    margin-top: 20px;
+    color: hsl(193, 38%, 86%);
 }
 
-.App-link {
-  color: #61dafb;
+.generate_advice_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    position: absolute;
+    bottom: -30px; 
+    background-color: hsl(150, 100%, 66%);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .5s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.generate_advice_btn:hover {
+    transform: scale(.9);
+    transition-duration: .5s;
+}
+
+
+/* Safari */
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media screen and (max-width: 576px) {
+    .advice__container {
+        margin: 0px 20px;
+    }
 }
