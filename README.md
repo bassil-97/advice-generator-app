@@ -1,3 +1,7 @@
+## This is part of Frontend Mentor challenges built with Reactjs using https://api.adviceslip.com/advice API to fetch advice.
+### Demo:
+https://advice-generatorr.netlify.app/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
